@@ -115,6 +115,7 @@
             this.Button_set_info.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Button_set_info.TabIndex = 11;
             this.Button_set_info.TabStop = false;
+            this.Button_set_info.Click += new System.EventHandler(this.Button_set_info_Click);
             // 
             // MainForm
             // 
@@ -132,7 +133,6 @@
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.Button_set_info1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_set_image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_set_info)).EndInit();

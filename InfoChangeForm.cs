@@ -73,7 +73,17 @@ namespace plant_sitter
             label3.Text = textBox3.Text;
             label4.Text = textBox4.Text;
             label5.Text = textBox5.Text;
+
+            Properties.Settings.Default.Label1Text = textBox1.Text;
+            Properties.Settings.Default.Label2Text = textBox2.Text;
+            Properties.Settings.Default.Label3Text = textBox3.Text;
+            Properties.Settings.Default.Label4Text = textBox4.Text;
+            Properties.Settings.Default.Label5Text = textBox5.Text;
+            Properties.Settings.Default.Save();
+
             this.Close();
         }
+
+
     }
 }

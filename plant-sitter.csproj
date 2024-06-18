@@ -102,9 +102,6 @@
     <None Include="Resources\reset.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\basic.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\강낭콩.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\나팔꽃.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basic.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

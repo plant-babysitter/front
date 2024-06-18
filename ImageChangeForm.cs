@@ -28,11 +28,10 @@ namespace plant_sitter
 
         private void InitializeCustomComponents()
         {
-            // ListBox 설정
             listBoxImages = new ListBox { Location = new System.Drawing.Point(20, 20), Width = 200, Height = 150 };
 
             // 리소스에 있는 이미지 파일 이름 추가
-            listBoxImages.Items.Add("나팔꽃");           // 추가할 이미지 파일 이름들을 이와 같이 리스트에 추가합니다.
+            listBoxImages.Items.Add("나팔꽃");
             listBoxImages.Items.Add("강낭콩");
             listBoxImages.Items.Add("방울토마토");
             listBoxImages.Items.Add("basic");
@@ -40,7 +39,6 @@ namespace plant_sitter
             listBoxImages.DoubleClick += ListBoxImages_DoubleClick;
             this.Controls.Add(listBoxImages);
 
-            // Button A 설정
             buttonA = new Button
             {
                 Text = "선택",
@@ -49,7 +47,6 @@ namespace plant_sitter
             buttonA.Click += ButtonA_Click;
             this.Controls.Add(buttonA);
 
-            // Button B 설정
             buttonB = new Button
             {
                 Text = "확인",
@@ -58,7 +55,6 @@ namespace plant_sitter
             buttonB.Click += ButtonB_Click;
             this.Controls.Add(buttonB);
 
-            // Label 설정
             labelFileName = new Label { Location = new System.Drawing.Point(20, 180), Width = 200 };
             this.Controls.Add(labelFileName);
         }
@@ -85,14 +81,19 @@ namespace plant_sitter
 
         private void ButtonB_Click(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrEmpty(labelFileName.Text))
             {
-                // 리소스에 저장된 이미지를 사용하고 파일 이름을 저장
                 string imagePath = Path.Combine(Application.StartupPath, $"{labelFileName.Text}.jpg");
                 Properties.Settings.Default.PlantImagePath = imagePath;
+                Properties.Settings.Default.Save();
+          
             }
+
             this.Close();
         }
     }
+
+
 }
+
+
